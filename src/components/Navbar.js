@@ -11,7 +11,7 @@ export default function NavBar() {
         <div className="flex justify-between items-center py-4">
           <Link className="flex items-center gap-2" href="/">
             <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-semibold">Atelier Dzeko</span>
+            <span className="text-lg font-semibold">Atelier Dzekooooo</span>
           </Link>
           <div className="flex gap-4">
             <Link className="text-sm font-medium hover:underline" href="#">

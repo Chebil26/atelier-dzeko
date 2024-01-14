@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <div className="fixed top-0 w-full bg-white m-6">
+    <div className="fixed top-0 w-full bg-white m-6 mb-16">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center">
           <Link className="flex items-center gap-2" href="/">
             <MountainIcon className="h-6 w-6" />
             <span className="text-lg font-semibold">Atelier Dzekooooo</span>

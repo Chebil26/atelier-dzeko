@@ -25,8 +25,8 @@ export default function Product(params) {
                 this table is designed to last.
               </p>
               <p>
-                With its spacious design and sleek finish, it's the perfect
-                addition to your dining room. Whether you're hosting a dinner
+                With its spacious design and sleek finish, its the perfect
+                addition to your dining room. Whether youre hosting a dinner
                 party or enjoying a meal with your family, this table provides
                 ample space and a stylish setting.
               </p>
@@ -44,8 +44,8 @@ export default function Product(params) {
             designed to last.
           </p>
           <p>
-            With its spacious design and sleek finish, it's the perfect addition
-            to your dining room. Whether you're hosting a dinner party or
+            With its spacious design and sleek finish, its the perfect addition
+            to your dining room. Whether youre hosting a dinner party or
             enjoying a meal with your family, this table provides ample space
             and a stylish setting.
           </p>

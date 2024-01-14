@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "itemName": "Le-Flat",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/le-flat.jpg",
+    "price": 18000,
+    "link": "/dddd"
+  },
+  {
+    "id": 2,
+    "itemName": "Meuble d'entrée",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/meuble-entree.jpg",
+    "price": 18000,
+    "link": "/dddd"
+  },
+  {
+    "id": 3,
+    "itemName": "Niche à chat",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/niche-chat.jpg",
+    "price": 18000,
+    "link": "/dddd"
+  }
+]

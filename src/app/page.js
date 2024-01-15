@@ -1,14 +1,11 @@
-import Image from "next/image";
 import Card from "@/components/Card";
 import jsonData from "../../public/data.json";
 export default function Home() {
-  console.log(jsonData);
-
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-3">
       {jsonData.map((item) => (
         <Card key={item.id} item={item} />
       ))}
-    </>
+    </div>
   );
 }

@@ -4,20 +4,20 @@
     "itemName": "Le-Flat",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/le-flat.jpg",
     "price": 18000,
-    "link": "/dddd"
+    "description": "Vous cherchez un espace de travail dédié ? Vous allez adorer notre bureau pliable !! 🤯 Agrémenté de fonctionnalités et d'un design unique : espaces de rangement, éclairage et prises électriques. Dimensions : 71x115 cm et une profondeur de 17 cm. \n✅ Livraison disponible avec paiement à la livraison. \n✅ Profitez de l'offre et commandez dès maintenant."
   },
   {
     "id": 2,
     "itemName": "Meuble d'entrée",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/meuble-entree.jpg",
     "price": 18000,
-    "link": "/dddd"
+    "description": "🌟 Introduisez l'Élégance dans Votre Foyer🌟\n-Transformez votre entrée en un espace accueillant et chic avec notre tout nouveau meuble d'entrée exclusif, conçu pour allier fonctionnalité et esthétique. 🏡✨\nDes Caractéristiques Uniques:\n   - Design Raffiné: Un mélange parfait de modernité et de tradition, ce meuble ajoutera une touche d'élégance à votre foyer.\n   - Espace de Rangement Intelligent: Maximisez l'organisation avec des compartiments astucieusement conçus pour vos chaussures, clés, et autres essentiels.\n   - Matériaux Durables: Fabriqué avec des matériaux de haute qualité pour assurer une durabilité à long terme.\n👌 Pourquoi Choisir Notre Meuble?\n   - Adapté à Votre Style de Vie: Que vous ayez une famille occupée ou que vous aimiez recevoir des invités, ce meuble s'adapte à votre mode de vie.\n   - Facile à Entretenir: Profitez d'un mobilier qui se nettoie facilement, vous laissant plus de temps pour les moments importants.\n🚚 Livraison disponible en Algérie!\n   - Commandez maintenant et bénéficiez de la livraison dans tout le pays. 🌍\n-Ne manquez pas l'opportunité d'embellir votre foyer. Commandez maintenant et faites une première impression mémorable! 💼🏡"
   },
   {
     "id": 3,
     "itemName": "Niche à chat",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/niche-chat.jpg",
     "price": 18000,
-    "link": "/dddd"
+    "description": "Élevez le confort de votre félin avec notre niche à chat en bois aggloméré MDF 18mm - une combinaison parfaite de style et de fonctionnalité ! 🐾✨ Offrez à votre compagnon à quatre pattes un refuge élégant et durable. 🛍️ Ne manquez pas l'occasion d'offrir à votre chat le meilleur de la détente ! Commandez maintenant et transformez son espace de repos ! 🌟"
   }
 ]

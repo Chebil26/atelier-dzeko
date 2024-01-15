@@ -2,28 +2,35 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/sCHKKCBptGW
  */
-import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <div className="fixed top-0 w-full bg-white m-6 mb-16">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          <Link className="flex items-center gap-2" href="/">
-            <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-semibold">Atelier Dzekooooo</span>
-          </Link>
-          <div className="flex gap-4">
-            <Link className="text-sm font-medium hover:underline" href="#">
-              À propos
-            </Link>
-            <Link className="text-sm font-medium hover:underline" href="#">
-              Contact
-            </Link>
-          </div>
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
+      <nav
+        className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+        aria-label="Global"
+      >
+        <a className="flex-none flex items-center" href="/">
+          <img
+            src="/atelier-dzeko-logo.png"
+            alt="Logo"
+            className="h-40 w-auto"
+          />
+        </a>
+        <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
+          <a
+            className="font-medium text-blue-5000"
+            href="#"
+            aria-current="page"
+          >
+            contact
+          </a>
+          <a className="font-medium text-gray-600 hover:text-gray-400" href="#">
+            à propos
+          </a>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
 

@@ -2,6 +2,7 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/8F1PtgTn3YO
  */
+import Link from "next/link";
 import jsonData from "../../../../public/data.json";
 export default function Product(params) {
   const item = jsonData.filter((item) => item.id == params.params.id);
@@ -16,9 +17,11 @@ export default function Product(params) {
             </div>
             <div className="text-4xl font-bold">{item[0].price} DZD</div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
-                Commandez !
-              </button>
+              <Link href={`/order`}>
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
+                  Commandez !
+                </button>
+              </Link>
             </div>
           </div>
         </div>

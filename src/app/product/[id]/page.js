@@ -1,11 +1,23 @@
+"use client";
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/8F1PtgTn3YO
  */
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import jsonData from "../../../../public/data.json";
 export default function Product(params) {
+  const router = useRouter();
   const item = jsonData.filter((item) => item.id == params.params.id);
+
+  const handleOrderClick = () => {
+    const orderData = item[0]; // Assuming item is an array
+    router.push({
+      pathname: `/order`,
+      query: { orderData },
+    });
+  };
+
   return (
     <main className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-6">
       <div className="grid gap-4 md:gap-10 items-start order-2 md:order-1">
@@ -17,11 +29,12 @@ export default function Product(params) {
             </div>
             <div className="text-4xl font-bold">{item[0].price} DZD</div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href={`/order`}>
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
-                  Commandez !
-                </button>
-              </Link>
+              <button
+                onClick={handleOrderClick}
+                className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
+              >
+                Commandez !
+              </button>
             </div>
           </div>
         </div>

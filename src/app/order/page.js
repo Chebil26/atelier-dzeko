@@ -1,9 +1,14 @@
 "use client";
 import { useState } from "react";
 import Select from "react-select";
+import { useRouter } from "next/navigation";
+
 import jsonData from "../../../public/data.json";
 
 export default function Order() {
+  const router = useRouter();
+  const orderData = router.query;
+  console.log(orderData);
   const [product, setProduct] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

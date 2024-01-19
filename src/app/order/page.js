@@ -1,18 +1,23 @@
 "use client";
 import { useState } from "react";
 import Select from "react-select";
-import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import axios from "axios";
 
 import jsonData from "../../../public/data.json";
 
 export default function Order() {
-  const router = useRouter();
-  const orderData = router.query;
-  console.log(orderData);
-  const [product, setProduct] = useState("");
+  const searchParams = useSearchParams();
+  const product_id = searchParams.get("id");
+  const product_name = searchParams.get("name");
+  const [product, setProduct] = useState({
+    value: product_id,
+    label: product_name,
+  });
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  console.log(product);
 
   const options = jsonData.map((item) => ({
     value: item.id,
@@ -37,9 +42,22 @@ export default function Order() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form submitted:", { product, name, email, phone });
+    try {
+      const response = axios.post(
+        "/api/send",
+        {
+          body: JSON.stringify({ product, name, email, phone }),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error sending data:", error);
+    }
   };
 
   return (
@@ -110,7 +128,7 @@ export default function Order() {
           />
         </div>
         <button
-          className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+          className="bg-blue-500 text-white rounded-lg shadow-md transform transition-transform hover:scale-105"
           type="submit"
         >
           Submit Order

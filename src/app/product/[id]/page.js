@@ -10,12 +10,9 @@ export default function Product(params) {
   const router = useRouter();
   const item = jsonData.filter((item) => item.id == params.params.id);
 
-  const handleOrderClick = () => {
-    const orderData = item[0]; // Assuming item is an array
-    router.push({
-      pathname: `/order`,
-      query: { orderData },
-    });
+  const orderData = {
+    id: item[0].id,
+    name: item[0].itemName,
   };
 
   return (
@@ -29,12 +26,16 @@ export default function Product(params) {
             </div>
             <div className="text-4xl font-bold">{item[0].price} DZD</div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <button
-                onClick={handleOrderClick}
-                className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
+              <Link
+                href={{
+                  pathname: `/order`,
+                  query: orderData,
+                }}
               >
-                Commandez !
-              </button>
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
+                  Commandez !
+                </button>
+              </Link>
             </div>
           </div>
         </div>

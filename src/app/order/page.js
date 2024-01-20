@@ -3,6 +3,7 @@ import { useState } from "react";
 import Select from "react-select";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
+import { Resend } from "resend";
 
 import jsonData from "../../../public/data.json";
 
@@ -17,7 +18,6 @@ export default function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  console.log(product);
 
   const options = jsonData.map((item) => ({
     value: item.id,
@@ -41,22 +41,25 @@ export default function Order() {
     // other style properties for components like singleValue, multiValue, etc.
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (req, res) => {
+    const resend = new Resend("re_3Fk1ajeG_2jazHguUJH4JDpXJbakKxNgW");
+    e.preventDefault(); // Add this line to prevent default form submission
+    console.log(email);
     try {
-      const response = axios.post(
-        "/api/send",
-        {
-          body: JSON.stringify({ product, name, email, phone }),
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(response.data);
+      const { data, error } = await resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: email,
+        subject: "Order Confirmation",
+        html: `<p>Thank you for your order of </p>`,
+      });
+
+      if (error) {
+        return { error }; // Change from Response.json({ error }) to { error }
+      }
+
+      return { data }; // Change from Response.json({ data }) to { data }
     } catch (error) {
-      console.error("Error sending data:", error);
+      return { error }; // Change from Response.json({ error }) to { error }
     }
   };
 

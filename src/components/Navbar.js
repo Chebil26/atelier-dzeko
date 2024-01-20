@@ -5,27 +5,27 @@
 
 export default function NavBar() {
   return (
-    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-soft-orange mb-4">
       <nav
-        className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+        className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between text-lg"
         aria-label="Global"
       >
-        <a className="flex-none flex items-center" href="/">
+        <a className="flex-none flex items-center m-6" href="/">
           <img
             src="/atelier-dzeko-logo.png"
             alt="Logo"
-            className="h-40 w-auto"
+            className="h-20 w-auto"
           />
         </a>
         <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
           <a
-            className="font-medium text-gray-600 hover:text-gray-400"
+            className="font-medium text-gray-600 hover:text-gray-400 text-lg"
             href="/contact"
           >
             contact
           </a>
           <a
-            className="font-medium text-gray-600 hover:text-gray-400"
+            className="font-medium text-gray-600 hover:text-gray-400 text-lg"
             href="/about"
           >
             à propos
@@ -35,6 +35,7 @@ export default function NavBar() {
     </header>
   );
 }
+
 
 function MountainIcon(props) {
   return (

@@ -12,6 +12,10 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      backgroundColor: {
+        'soft-orange': '#FAEEE0', // Replace with your desired soft orange color
+      }
     },
   },
   plugins: [],

@@ -5,7 +5,7 @@
 
 export default function NavBar() {
   return (
-    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-soft-orange mb-4">
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-amber-300">
       <nav
         className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between text-lg"
         aria-label="Global"
@@ -35,7 +35,6 @@ export default function NavBar() {
     </header>
   );
 }
-
 
 function MountainIcon(props) {
   return (

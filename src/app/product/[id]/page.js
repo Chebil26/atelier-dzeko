@@ -3,6 +3,13 @@
  * @see https://v0.dev/t/4whsSKhrOWk
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 export default function Component() {
   return (
@@ -60,31 +67,29 @@ export default function Component() {
             <p>60% combed ringspun cotton/40% polyester jersey tee.</p>
           </div>
         </div>
-        {/* <Accordion collapsible type="single">
-          <AccordionItem value="specs">
-            <AccordionTrigger>Specifications</AccordionTrigger>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-5">
-                <li>Material: 60% combed ringspun cotton/40% polyester</li>
-                <li>Fit: Regular</li>
-                <li>Wash care: Machine wash</li>
-              </ul>
+              Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="shipping">
-            <AccordionTrigger>Shipping Information</AccordionTrigger>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Is it styled?</AccordionTrigger>
             <AccordionContent>
-              <p>Ships in 2-3 business days.</p>
+              Yes. It comes with default styles that matches the other
+              components&apos; aesthetic.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="return">
-            <AccordionTrigger>Return Policy</AccordionTrigger>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              <p>Returns accepted within 30 days of purchase.</p>
+              Yes. It&apos;s animated by default, but you can disable it if you
+              prefer.
             </AccordionContent>
           </AccordionItem>
-        </Accordion> */}
-        <button size="lg">Add to cart</button>
+        </Accordion>
+        <Button>Commandez !</Button>
       </div>
     </div>
   );

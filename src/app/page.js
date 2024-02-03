@@ -10,7 +10,7 @@ export default function Home() {
       {/* <HeroSection /> */}
 
       <Banner />
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 p-6">
         {jsonData.map((item) => (
           <Card key={item.id} item={item} />
         ))}

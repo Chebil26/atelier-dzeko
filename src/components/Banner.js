@@ -4,6 +4,8 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 
+import { Button } from "./ui/button";
+
 export default function Component() {
   return (
     <div className="relative bg-white min-h-96 min-w-80">
@@ -15,30 +17,33 @@ export default function Component() {
         style={{
           aspectRatio: "1494/400",
           objectFit: "cover",
+          opacity: 0.7,
         }}
         width="1494"
       />
       <div className="absolute top-0 left-0 right-0 bottom-0 p-4 md:p-8 flex flex-col md:flex-row md:justify-between">
-        <div className="flex-1 space-y-4 md:space-y-6">
+        <div className="flex-1 space-y-4 md:space-y-6 ">
           <h1 className="text-lg md:text-4xl lg:text-5xl font-bold text-gray-800">
             Adzeko
           </h1>
-          <p className="text-base md:text-lg lg:text-xl font-semibold text-gray-800">
+          <p className="text-base md:text-lg lg:text-5xl font-bold text-gray-800">
             DES MEUBLES COMPLICES ...
             <br />
+          </p>
+          <p className="text-base md:text-lg lg:text-5xl font-bold text-amber-500">
             POUR UN INTÉRIEUR SUR MESURE !
           </p>
-          <p className="text-sm md:text-base lg:text-lg font-medium text-gray-600 italic">
-            Craquez pour des meubles qui vous correspondent,
-          </p>
-          <button className="bg-yellow-400 text-white">
-            DECOUVREZ NOTRE GAMME
-          </button>
+          <div className="text-center absolute inset-x-0 bottom-0 pb-10">
+            <p className="text-sm md:text-base lg:text-3xl font-medium text-gray-800 p-2">
+              Craquez pour des meubles qui vous correspondent,
+            </p>
+            <Button>Decouverez notre gamme</Button>
+          </div>
         </div>
-        <div className="mt-4 md:mt-0 space-y-2">
+        <div className="mt-4 md:mt-0 space-y-2 font-bold">
           <div className="flex items-center space-x-2">
-            <PhoneIcon className="text-yellow-400" />
-            <span className="text-xs md:text-sm lg:text-base text-gray-600">
+            <PhoneIcon className="text-yellow-400 lg:text-xl" />
+            <span className="text-xs md:text-sm lg:text-xl text-gray-600">
               +213-559-81-80-49
             </span>
           </div>

@@ -13,26 +13,28 @@ export default function Component() {
         alt="Furniture Banner"
         className="w-full h-auto min-h-96 "
         height="400"
-        src="/test-banner.jpg"
+        src="/bg_banner.png"
         style={{
-          aspectRatio: "1494/400",
+          aspectRatio: "1494/450",
           objectFit: "cover",
-          opacity: 0.7,
+          opacity: 0.8,
         }}
         width="1494"
       />
       <div className="absolute top-0 left-0 right-0 bottom-0 p-4 md:p-8 flex flex-col md:flex-row md:justify-between">
         <div className="flex-1 space-y-4 md:space-y-6 ">
-          <h1 className="text-lg md:text-4xl lg:text-5xl font-bold text-gray-800">
+          {/* <h1 className="text-lg md:text-4xl lg:text-5xl font-bold text-gray-800">
             Adzeko
-          </h1>
-          <p className="text-base md:text-lg lg:text-5xl font-bold text-gray-800">
-            DES MEUBLES COMPLICES ...
-            <br />
-          </p>
-          <p className="text-base md:text-lg lg:text-5xl font-bold text-amber-500">
-            POUR UN INTÉRIEUR SUR MESURE !
-          </p>
+          </h1> */}
+          <div className="pt-32 p-16">
+            <p className="text-base md:text-lg lg:text-4xl font-bold text-gray-800">
+              DES MEUBLES COMPLICES ...
+              <br />
+            </p>
+            <p className="text-base md:text-lg lg:text-5xl font-bold text-amber-400">
+              POUR UN INTÉRIEUR SUR MESURE !
+            </p>
+          </div>
           <div className="text-center absolute inset-x-0 bottom-0 pb-10">
             <p className="text-sm md:text-base lg:text-3xl font-medium text-gray-800 p-2">
               Craquez pour des meubles qui vous correspondent,

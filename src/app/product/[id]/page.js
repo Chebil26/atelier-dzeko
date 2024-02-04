@@ -10,17 +10,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import jsonData from "../../../../public/data.json";
 
-export default function Component() {
+export default function Component(params) {
+  const item = jsonData.filter((item) => item.id == params.params.id);
+
+  const orderData = {
+    id: item[0].id,
+    price: item[0].price,
+    name: item[0].itemName,
+    description: item[0].description,
+  };
+
+  console.log(orderData);
+
   return (
     <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-6">
       <div className="grid md:grid-cols-5 gap-3 items-start">
         <div className="md:col-span-4">
           <img
             alt="Product Image"
-            className="aspect-[2/3] object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+            className="aspect-[4/5] object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
             height={900}
-            src="/placeholder.svg"
+            src="/adzeko-hero.jpg"
             width={600}
           />
         </div>
@@ -30,7 +42,7 @@ export default function Component() {
               alt="Preview thumbnail"
               className="aspect-[5/6] object-cover"
               height={120}
-              src="/placeholder.svg"
+              src="/adzeko-hero.jpg"
               width={100}
             />
             <span className="sr-only">View Image 1</span>
@@ -40,7 +52,7 @@ export default function Component() {
               alt="Preview thumbnail"
               className="aspect-[5/6] object-cover"
               height={120}
-              src="/placeholder.svg"
+              src="/adzeko-hero.jpg"
               width={100}
             />
             <span className="sr-only">View Image 2</span>
@@ -50,7 +62,7 @@ export default function Component() {
               alt="Preview thumbnail"
               className="aspect-[5/6] object-cover"
               height={120}
-              src="/placeholder.svg"
+              src="/adzeko-hero.jpg"
               width={100}
             />
             <span className="sr-only">View Image 3</span>
@@ -59,37 +71,28 @@ export default function Component() {
       </div>
       <div className="grid gap-4 md:gap-10 items-start">
         <div className="grid gap-4">
-          <h1 className="font-bold text-3xl lg:text-4xl">
-            Acme Circles T-Shirt
-          </h1>
-          <div className="text-4xl font-bold ml-auto">$99</div>
+          <h1 className="font-bold text-3xl lg:text-4xl">{orderData.name}</h1>
+          <div className="text-4xl font-bold">{orderData.price} DA</div>
           <div>
-            <p>60% combed ringspun cotton/40% polyester jersey tee.</p>
+            <p>{orderData.description}</p>
           </div>
         </div>
+        <Button>Commandez !</Button>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>Dimensions</AccordionTrigger>
             <AccordionContent>
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionTrigger>Caracterisqtique de l'article</AccordionTrigger>
             <AccordionContent>
               Yes. It comes with default styles that matches the other
               components&apos; aesthetic.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
-            </AccordionContent>
-          </AccordionItem>
         </Accordion>
-        <Button>Commandez !</Button>
       </div>
     </div>
   );

@@ -35,38 +35,49 @@ export default function Component(params) {
             src="/adzeko-hero.jpg"
             width={600}
           />
-        </div>
-        <div className="hidden md:flex flex-col gap-3 items-start">
-          <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
-            <img
-              alt="Preview thumbnail"
-              className="aspect-[5/6] object-cover"
-              height={120}
-              src="/adzeko-hero.jpg"
-              width={100}
-            />
-            <span className="sr-only">View Image 1</span>
-          </button>
-          <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
-            <img
-              alt="Preview thumbnail"
-              className="aspect-[5/6] object-cover"
-              height={120}
-              src="/adzeko-hero.jpg"
-              width={100}
-            />
-            <span className="sr-only">View Image 2</span>
-          </button>
-          <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
-            <img
-              alt="Preview thumbnail"
-              className="aspect-[5/6] object-cover"
-              height={120}
-              src="/adzeko-hero.jpg"
-              width={100}
-            />
-            <span className="sr-only">View Image 3</span>
-          </button>
+          <div className=" md:flex gap-1">
+            <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
+              <img
+                alt="Preview thumbnail"
+                className="aspect-[5/6] object-cover"
+                height={120}
+                src="/adzeko-hero.jpg"
+                width={100}
+              />
+              <span className="sr-only">View Image 1</span>
+            </button>
+            <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
+              <img
+                alt="Preview thumbnail"
+                className="aspect-[5/6] object-cover"
+                height={120}
+                src="/adzeko-hero.jpg"
+                width={100}
+              />
+              <span className="sr-only">View Image 2</span>
+            </button>
+            <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
+              <img
+                alt="Preview thumbnail"
+                className="aspect-[5/6] object-cover"
+                height={120}
+                src="/adzeko-hero.jpg"
+                width={100}
+              />
+              <span className="sr-only">View Image 3</span>
+            </button>
+
+            <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
+              <img
+                alt="Preview thumbnail"
+                className="aspect-[5/6] object-cover"
+                height={120}
+                src="/adzeko-hero.jpg"
+                width={100}
+              />
+              <span className="sr-only">View Image 3</span>
+            </button>
+          </div>
         </div>
       </div>
       <div className="grid gap-4 md:gap-10 items-start">

@@ -97,7 +97,9 @@ export default function Component(params) {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Caracterisqtique de l'article</AccordionTrigger>
+            <AccordionTrigger>
+              Caracterisqtique de l&apos;article
+            </AccordionTrigger>
             <AccordionContent>
               Yes. It comes with default styles that matches the other
               components&apos; aesthetic.

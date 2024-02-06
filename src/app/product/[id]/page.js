@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import jsonData from "../../../../public/data.json";
+import { OrderDialog } from "@/components/OrderDialog";
 
 export default function Component(params) {
   const item = jsonData.filter((item) => item.id == params.params.id);
@@ -88,7 +89,7 @@ export default function Component(params) {
             <p>{orderData.description}</p>
           </div>
         </div>
-        <Button>Commandez !</Button>
+        <OrderDialog item={orderData} />
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Dimensions</AccordionTrigger>

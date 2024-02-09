@@ -1,23 +1,116 @@
 [
   {
-    "id": 2,
-    "itemName": "Meuble d'entrée",
-    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/meuble-entree.jpg",
+    "id": 1,
+    "description": "La coiffeuse 'Monroe' allie élégance et praticité dans un design compact. Fabriquée en panneau composite, elle offre une durabilité remarquable. Ses lignes épurées ajoutent une touche de modernité à votre chambre en offrant amplement d'espace de rangement pour vos produits de beauté essentiels.",
+    "itemName": "Monroe",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/monore.png",
     "price": 18000,
-    "description": "🌟 Introduisez l'Élégance dans Votre Foyer🌟\n-Transformez votre entrée en un espace accueillant et chic avec notre tout nouveau meuble d'entrée exclusif, conçu pour allier fonctionnalité et esthétique. 🏡✨\nDes Caractéristiques Uniques:\n   - Design Raffiné: Un mélange parfait de modernité et de tradition, ce meuble ajoutera une touche d'élégance à votre foyer.\n   - Espace de Rangement Intelligent: Maximisez l'organisation avec des compartiments astucieusement conçus pour vos chaussures, clés, et autres essentiels.\n   - Matériaux Durables: Fabriqué avec des matériaux de haute qualité pour assurer une durabilité à long terme.\n👌 Pourquoi Choisir Notre Meuble?\n   - Adapté à Votre Style de Vie: Que vous ayez une famille occupée ou que vous aimiez recevoir des invités, ce meuble s'adapte à votre mode de vie.\n   - Facile à Entretenir: Profitez d'un mobilier qui se nettoie facilement, vous laissant plus de temps pour les moments importants.\n🚚 Livraison disponible en Algérie!\n   - Commandez maintenant et bénéficiez de la livraison dans tout le pays. 🌍\n-Ne manquez pas l'opportunité d'embellir votre foyer. Commandez maintenant et faites une première impression mémorable! 💼🏡"
+    "dimensions": {
+      "1": "Largeur 955mm, hauteur 750mm, profondeur 460 mm ",
+      "2": "Profondeur du plan de travail 460mm, largeur 955 mm",
+      "3": "Hauteur du plan de travail 750 mm"
+    },
+    "functionalities": {
+      "1": "Organisation et espaces de stockage",
+      "2": "Éclairage LED et connexions",
+      "3": "Tablette Pliable (Vérin ou compas au choix)",
+      "4": "Pieds en Inox"
+    },
+
+    "characteristics": {
+      "1": "Matériau: Panneaux composites ",
+      "2": "Combinaison  couleur: (blanc), (Blanc/Beige) « ajouter une case option »",
+      "3": "État à la livraison: meuble semi-monté "
+    }
   },
   {
-    "id": 1,
+    "id": 2,
+    "description": "Avec sa surface compacte de seulement 0,09 m² et un design épuré, le bureau pliable Flatmate s'adapte harmonieusement à tout espace, offrant une solution astucieuse pour optimiser l'espace disponible. Profitez d'un espace de travail confortable grâce à son plan de travail stable de 420 x 710 mm, son tableau d'organisation flexible et un éclairage doux, évitant tout éblouissement.",
     "itemName": "Le-Flat",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/le-flat.jpg",
     "price": 18000,
-    "description": "Vous cherchez un espace de travail dédié ? Vous allez adorer notre bureau pliable !! 🤯 Agrémenté de fonctionnalités et d'un design unique : espaces de rangement, éclairage et prises électriques. Dimensions : 71x115 cm et une profondeur de 17 cm. \n✅ Livraison disponible avec paiement à la livraison. \n✅ Profitez de l'offre et commandez dès maintenant."
+    "dimensions": {
+      "1": "Largeur 717, hauteur avec pieds 1140, profondeur 122 mm",
+      "2": "Profondeur du plan de travail 412, largeur 717 mm",
+      "3": "Hauteur du plan de travail 730 mm",
+      "4": "Hauteur pieds 90 mm"
+    },
+    "functionalities": {
+      "1": "Organisation et espaces de stockage",
+      "2": "Éclairage LED et connexions",
+      "3": "Tablette Pliable (Vérin ou compas au choix)",
+      "4": "Pieds en Inox"
+    },
+    "characteristics": {
+      "1": "Matériau: Panneaux composites ",
+      "2": "Combinaison  couleur: (blanc), (Blanc/Beige)",
+      "3": "État à la livraison: meuble monté à fixer au mur "
+    }
   },
   {
     "id": 3,
-    "itemName": "Niche à chat",
-    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/niche-chat.jpg",
+    "description": "Le LE-FOLD est parfait pour meubler des espaces restreints, idéal pour les utilisateurs mobiles grâce à ses dimensions compactes. Avec son équipement intégré et flexible, il offre un rangement pratique pour les fournitures d'écriture et les dispositifs électroniques, combinant les caractéristiques d'un meuble classique aux besoins modernes de la vie connectée.",
+    "itemName": "LE-FOLD",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/le-fold.png",
     "price": 18000,
-    "description": "Élevez le confort de votre félin avec notre niche à chat en bois aggloméré MDF 18mm - une combinaison parfaite de style et de fonctionnalité ! 🐾✨ Offrez à votre compagnon à quatre pattes un refuge élégant et durable. 🛍️ Ne manquez pas l'occasion d'offrir à votre chat le meilleur de la détente ! Commandez maintenant et transformez son espace de repos ! 🌟"
+    "dimensions": {
+      "1": "Largeur 717, hauteur 420mm, profondeur 122 mm ",
+      "2": "Profondeur du plan de travail 420mm, largeur 717 mm ",
+      "3": "Hauteur du plan de travail 730 mm"
+    },
+    "functionalities": {
+      "1": "Organisation et espaces de stockage",
+      "2": "Éclairage LED et connexions",
+      "3": "Tablette Pliable (Vérin ou compas au choix)"
+    },
+    "characteristics": {
+      "1": "Matériau: MDF 18mm",
+      "2": "Combinaison  couleur: (blanc), (Blanc/Beige)",
+      "3": "État à la livraison: meuble monté à fixer au mur "
+    }
+  },
+  {
+    "id": 4,
+    "description": "Ajoutez une touche de praticité et de fonctionnalité à votre espace d'entrée avec notre banc d'entrée moderne doté de rangements intégrés. Conçu avec un souci du détail et de la qualité, ce banc offre un mélange parfait de style contemporain et de praticité pour votre foyer.",
+    "itemName": "Bench",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/bench.png",
+    "price": 18000,
+    "dimensions": {
+      "1": "Largeur 800mm ,hauteur 420mm, profondeur 350 mm",
+      "2": "Profondeur du plan de travail 350mm, largeur 717 mm",
+      "3": "Hauteur pieds 70 mm"
+    },
+    "functionalities": {
+      "1": "Organisation et espaces de stockage",
+      "2": "Banquette en éponge",
+      "3": "Pieds en Inox"
+    },
+    "characteristics": {
+      "1": "Matériau: MDF 18mm",
+      "2": "Combinaison  couleur: (blanc), (Blanc/Beige)",
+      "3": "État à la livraison: meuble monté"
+    }
+  },
+  {
+    "id": 5,
+    "description": "El Gato est l’ultime havre de paix pour votre félin préféré, combinant confort et praticité pour répondre à ses besoins naturels. Conçue avec des matériaux de haute qualité et un design élégant, cette niche offre à votre chat un espace privé pour se retirer, se détendre et se sentir en sécurité.",
+    "itemName": "El Gato",
+    "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/elgato.png",
+    "price": 18000,
+    "dimensions": {
+      "1": "Largeur 660mm ,hauteur 420mm, profondeur 480mm",
+      "2": "Profondeur du plan de travail 480mm, largeur 660 mm",
+      "3": "Hauteur pieds 40 mm"
+    },
+    "functionalities": {
+      "1": "Cache litière",
+      "2": "Banquette en éponge",
+      "3": "Pieds en Inox"
+    },
+    "characteristics": {
+      "1": "Matériau: MDF 18mm",
+      "2": "Combinaison  couleur: (blanc), (Blanc/Beige)",
+      "3": "État à la livraison: meuble monté"
+    }
   }
 ]

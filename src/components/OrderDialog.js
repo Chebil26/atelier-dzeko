@@ -40,7 +40,7 @@ export function OrderDialog({ item }) {
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="text-center">
-            {item.name} <br />
+            {item.itemName} <br />
             {item.price} da
             {/* <Select>
               <SelectTrigger className="w-[380px]">

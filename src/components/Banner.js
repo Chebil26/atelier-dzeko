@@ -27,26 +27,26 @@ export default function Component() {
             Adzeko
           </h1> */}
           <div className="pt-32 p-16">
-            <p className="text-base md:text-lg lg:text-4xl font-bold text-gray-800">
+            <p className=" md:text-lg lg:text-4xl font-bold text-gray-800">
               DES MEUBLES COMPLICES ...
               <br />
             </p>
-            <p className="text-base md:text-lg lg:text-5xl font-bold text-amber-400">
+            <p className=" md:text-lg lg:text-5xl font-bold text-amber-400">
               POUR UN INTÉRIEUR SUR MESURE !
             </p>
           </div>
           <div className="text-center absolute inset-x-0 bottom-0 pb-10">
-            <p className="text-sm md:text-base lg:text-3xl font-medium text-gray-800 p-2">
+            <p className="md:text-lg lg:text-3xl font-semibold text-gray-800 p-2">
               Craquez pour des meubles qui vous correspondent,
             </p>
-            <Button>Decouverez notre gamme</Button>
+            <Button className="text-xl "> Découverez notre gamme</Button>
           </div>
         </div>
         <div className="mt-4 md:mt-0 space-y-2 font-bold">
           <div className="flex items-center space-x-2">
             <PhoneIcon className="text-yellow-400 lg:text-xl" />
             <span className="text-xs md:text-sm lg:text-xl text-gray-600">
-              +213-559-81-80-49
+              0559818049
             </span>
           </div>
         </div>

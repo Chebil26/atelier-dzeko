@@ -12,18 +12,12 @@ import {
 import { Button } from "@/components/ui/button";
 import jsonData from "../../../../public/data.json";
 import { OrderDialog } from "@/components/OrderDialog";
+import Delivery from "@/components/Delivery";
 
 export default function Component(params) {
   const item = jsonData.filter((item) => item.id == params.params.id);
 
-  const orderData = {
-    id: item[0].id,
-    price: item[0].price,
-    name: item[0].itemName,
-    description: item[0].description,
-  };
-
-  console.log(orderData);
+  const orderData = item[0];
 
   return (
     <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-6">
@@ -31,12 +25,12 @@ export default function Component(params) {
         <div className="md:col-span-4">
           <img
             alt="Product Image"
-            className="aspect-[4/5] object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+            className="aspect-[1/1] object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
             height={900}
-            src="/adzeko-hero.jpg"
+            src={orderData.imageLink}
             width={600}
           />
-          <div className=" md:flex gap-1">
+          {/* <div className=" md:flex gap-1">
             <button className="border hover:border-gray-900 rounded-lg overflow-hidden transition-colors dark:hover:border-gray-50">
               <img
                 alt="Preview thumbnail"
@@ -78,32 +72,62 @@ export default function Component(params) {
               />
               <span className="sr-only">View Image 3</span>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="grid gap-4 md:gap-10 items-start">
         <div className="grid gap-4">
-          <h1 className="font-bold text-3xl lg:text-4xl">{orderData.name}</h1>
+          <h1 className="font-bold text-3xl lg:text-4xl">
+            {orderData.itemName}
+          </h1>
           <div className="text-4xl font-bold">{orderData.price} DA</div>
           <div>
             <p>{orderData.description}</p>
           </div>
         </div>
+        <Delivery />
         <OrderDialog item={orderData} />
+
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Dimensions</AccordionTrigger>
+            <AccordionTrigger>Caractéristiques</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              <div>
+                {Object.values(orderData.characteristics).map(
+                  (value, index) => (
+                    <div key={index} className="p-2 rounded">
+                      - {value}
+                    </div>
+                  )
+                )}
+              </div>
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-2">
-            <AccordionTrigger>
-              Caracterisqtique de l&apos;article
-            </AccordionTrigger>
+            <AccordionTrigger>Fonctionnalités</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              <div>
+                {Object.values(orderData.functionalities).map(
+                  (value, index) => (
+                    <div key={index} className="p-2 rounded">
+                      - {value}
+                    </div>
+                  )
+                )}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Dimensions</AccordionTrigger>
+            <AccordionContent>
+              <div>
+                {Object.values(orderData.dimensions).map((value, index) => (
+                  <div key={index} className="p-2 rounded">
+                    - {value}
+                  </div>
+                ))}
+              </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

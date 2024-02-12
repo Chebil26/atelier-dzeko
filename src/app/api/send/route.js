@@ -11,7 +11,7 @@ export async function POST(request) {
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "aminechebil33@gmail.com",
+      to: "mehdihimeurarchi1@gmail.com",
       subject: `Commande de  ${name} / ${email}`,
       html: `
       <p><strong>Produut:</strong> ${product} </p>

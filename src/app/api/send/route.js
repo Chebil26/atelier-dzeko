@@ -10,8 +10,8 @@ export async function POST(request) {
     const { product, price, name, email, phone, address, comment } = body;
 
     const data = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "mehdihimeurarchi1@gmail.com",
+      from: "Acme <onboarding@resend.dev>",
+      to: "aminechebil33@gmail.com",
       subject: `Commande de  ${name} / ${email}`,
       html: `
       <p><strong>Produut:</strong> ${product} </p>

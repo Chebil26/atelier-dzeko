@@ -17,13 +17,14 @@ export default function NavBar() {
             className="h-20 w-auto"
           />
         </a>
-        <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
+        <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5 p-4">
           <a
             className="font-medium text-gray-600 hover:text-gray-400 text-lg"
             href="/contact"
           >
             contact
           </a>
+          <span className="font-bold font-medium text-amber-400">|</span>
           <a
             className="font-medium text-gray-600 hover:text-gray-400 text-lg"
             href="/about"

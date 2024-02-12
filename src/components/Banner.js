@@ -1,12 +1,16 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/BMuxh3bSV1d
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+"use client";
 
 import { Button } from "./ui/button";
-
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 export default function Component() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    document.getElementById("products").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="relative bg-white min-h-96 min-w-80">
       <img
@@ -27,11 +31,11 @@ export default function Component() {
             Adzeko
           </h1> */}
           <div className="pt-32 p-16">
-            <p className=" md:text-lg lg:text-4xl font-bold text-gray-800">
+            <p className=" text-lg lg:text-4xl font-bold text-gray-800">
               DES MEUBLES COMPLICES ...
               <br />
             </p>
-            <p className=" md:text-lg lg:text-5xl font-bold text-amber-400">
+            <p className=" text-lg lg:text-5xl font-bold text-amber-400">
               POUR UN INTÉRIEUR SUR MESURE !
             </p>
           </div>
@@ -39,7 +43,9 @@ export default function Component() {
             <p className="md:text-lg lg:text-3xl font-semibold text-gray-800 p-2">
               Craquez pour des meubles qui vous correspondent,
             </p>
-            <Button className="text-xl "> Découverez notre gamme</Button>
+            <Button onClick={handleClick} className="text-xl ">
+              Découverez notre gamme
+            </Button>
           </div>
         </div>
         <div className="mt-4 md:mt-0 space-y-2 font-bold">

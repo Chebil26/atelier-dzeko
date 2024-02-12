@@ -1,4 +1,6 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -20,16 +22,55 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 export function OrderDialog({ item }) {
-  console.log(item);
-  const options = jsonData.map((item) => ({
-    value: item.id,
-    label: item.itemName,
-  }));
+  const { toast } = useToast();
+  const [open, setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    product: item.itemName,
+    price: item.price,
+    name: "",
+    email: "",
+    phone: "",
+    adress: "",
+    comment: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // const options = jsonData.map((item) => ({
+  //   value: item.id,
+  //   label: item.itemName,
+  // }));
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.status === 200) {
+      setOpen(false);
+      toast({
+        title: "Merci pour votre commande !",
+        description: `Nous vous contacterons dès que possible.
+                     Merci d'appeler le numéro 0559818049.`,
+      });
+    }
+  };
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button>Commandez !</Button>
       </DialogTrigger>
@@ -59,33 +100,83 @@ export function OrderDialog({ item }) {
           </div>
 
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
+            <Label
+              htmlFor="name"
+              className="text-right"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            >
+              Nom
             </Label>
-            <Input id="name" className="col-span-3" />
+            <Input
+              id="name"
+              className="col-span-3"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="email" className="text-right">
               Email
             </Label>
-            <Input id="email" className="col-span-3" />
+            <Input
+              id="email"
+              className="col-span-3"
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="number" className="text-right">
-              Phone Number
+              Numéro tel
             </Label>
-            <Input id="phone" className="col-span-3" />
+            <Input
+              id="phone"
+              className="col-span-3"
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="adress" className="text-right">
-              Adress
+            <Label htmlFor="address" className="text-right">
+              Adresse
             </Label>
-            <Input id="adress" className="col-span-3" />
+            <Input
+              id="address"
+              className="col-span-3"
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="comment" className="text-right">
+              Commentaire
+            </Label>
+            <Input
+              id="adress"
+              className="col-span-3"
+              type="text"
+              name="comment"
+              value={formData.comment}
+              onChange={handleChange}
+            />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Envoyé</Button>
+          <Button type="submit" onClick={sendEmail}>
+            Envoyé
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

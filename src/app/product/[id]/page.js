@@ -88,10 +88,15 @@ export default function Component(params) {
         <Delivery />
         <OrderDialog item={orderData} />
 
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion
+          type="single"
+          defaultValue="item-1"
+          collapsible
+          className="w-full text-xl"
+        >
           <AccordionItem value="item-1">
             <AccordionTrigger>Caractéristiques</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-base">
               <div>
                 {Object.values(orderData.characteristics).map(
                   (value, index) => (
@@ -106,7 +111,7 @@ export default function Component(params) {
 
           <AccordionItem value="item-2">
             <AccordionTrigger>Fonctionnalités</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-base">
               <div>
                 {Object.values(orderData.functionalities).map(
                   (value, index) => (
@@ -120,7 +125,7 @@ export default function Component(params) {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>Dimensions</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-base">
               <div>
                 {Object.values(orderData.dimensions).map((value, index) => (
                   <div key={index} className="p-2 rounded">

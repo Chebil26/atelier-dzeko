@@ -1,22 +1,35 @@
 // api/send/route.js
+import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-export const POST = async (req, res) => {
-  const { product, name, email, phone } = req.body;
-  console.log(req);
-
-  const resend = new Resend("re_3Fk1ajeG_2jazHguUJH4JDpXJbakKxNgW");
+const resend = new Resend("re_3Fk1ajeG_2jazHguUJH4JDpXJbakKxNgW");
+export async function POST(request) {
   try {
-    await resend.emails.send({
+    const body = await request.json();
+    console.log(body);
+    const { product, price, name, email, phone, address, comment } = body;
+
+    const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "aminechebil33@gmail.com",
-      subject: "Order Confirmation",
-      html: `<p>Thank you for your order of </p>`,
+      subject: `Commande de  ${name} / ${email}`,
+      html: `
+      <p><strong>Produut:</strong> ${product} </p>
+      <p><strong>Prix:</strong> ${price} </p>
+      <p><strong>Name:</strong> ${name} </p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Address:</strong> ${address}</p>
+      <p><strong>Comment:</strong> ${comment}</p>
+      `,
     });
+    if (data.status === "success") {
+      return NextResponse.json({ message: "Email success" });
+    }
+    return NextResponse.json(data);
   } catch (error) {
-    console.error("Error sending email:", error);
-
-    // Send an error response
-    res.status(500).json({ error: "Internal Server Error" });
+    console.log("error", error);
   }
-};
+}
+
+export default EmailTemplate;

@@ -31,5 +31,3 @@ export async function POST(request) {
     console.log("error", error);
   }
 }
-
-export default EmailTemplate;

@@ -4,7 +4,7 @@
     "description": "La coiffeuse 'Monroe' allie élégance et praticité dans un design compact. Fabriquée en panneau composite, elle offre une durabilité remarquable. Ses lignes épurées ajoutent une touche de modernité à votre chambre en offrant amplement d'espace de rangement pour vos produits de beauté essentiels.",
     "itemName": "Monroe",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/monore.png",
-    "price": 18000,
+    "price": 14500,
     "dimensions": {
       "1": "Largeur 955mm, hauteur 750mm, profondeur 460 mm ",
       "2": "Profondeur du plan de travail 460mm, largeur 955 mm",
@@ -52,7 +52,7 @@
     "description": "Le LE-FOLD est parfait pour meubler des espaces restreints, idéal pour les utilisateurs mobiles grâce à ses dimensions compactes. Avec son équipement intégré et flexible, il offre un rangement pratique pour les fournitures d'écriture et les dispositifs électroniques, combinant les caractéristiques d'un meuble classique aux besoins modernes de la vie connectée.",
     "itemName": "LE-FOLD",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/le-fold.png",
-    "price": 18000,
+    "price": 14500,
     "dimensions": {
       "1": "Largeur 717, hauteur 420mm, profondeur 122 mm ",
       "2": "Profondeur du plan de travail 420mm, largeur 717 mm ",
@@ -74,7 +74,7 @@
     "description": "Ajoutez une touche de praticité et de fonctionnalité à votre espace d'entrée avec notre banc d'entrée moderne doté de rangements intégrés. Conçu avec un souci du détail et de la qualité, ce banc offre un mélange parfait de style contemporain et de praticité pour votre foyer.",
     "itemName": "Bench",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/bench.png",
-    "price": 18000,
+    "price": 14500,
     "dimensions": {
       "1": "Largeur 800mm ,hauteur 420mm, profondeur 350 mm",
       "2": "Profondeur du plan de travail 350mm, largeur 717 mm",
@@ -96,7 +96,7 @@
     "description": "El Gato est l’ultime havre de paix pour votre félin préféré, combinant confort et praticité pour répondre à ses besoins naturels. Conçue avec des matériaux de haute qualité et un design élégant, cette niche offre à votre chat un espace privé pour se retirer, se détendre et se sentir en sécurité.",
     "itemName": "El Gato",
     "imageLink": "https://dlomnkdfvdzwzajbgpxu.supabase.co/storage/v1/object/public/atelier-dzeko/elgato.png",
-    "price": 18000,
+    "price": 10000,
     "dimensions": {
       "1": "Largeur 660mm ,hauteur 420mm, profondeur 480mm",
       "2": "Profondeur du plan de travail 480mm, largeur 660 mm",
